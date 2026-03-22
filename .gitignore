@@ -1,0 +1,12 @@
+
+
+# Logs
+*.log
+
+# Environment variables (IMPORTANT for database passwords)
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
