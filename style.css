@@ -1,0 +1,183 @@
+.header {
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Center container */
+.container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Base button style */
+.btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Individual button colors */
+.create {
+    background-color: #28a745; /* green */
+}
+
+.read {
+    background-color: #007bff; /* blue */
+}
+
+.update {
+    background-color: #ffc107; /* yellow */
+    color: black;
+}
+
+.delete {
+    background-color: #dc3545; /* red */
+}
+
+/* Hover effect */
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Click effect */
+.btn:active {
+    transform: scale(0.95);
+}
+
+.form-box {
+    margin: 20px auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-box input, .form-box button {
+    padding: 8px;
+    font-size: 14px;
+}
+
+#studentTable {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+#studentTable th, #studentTable td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+#studentTable th {
+    background-color: #f4f4f4;
+}
+
+/* Dark background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1;
+}
+
+/* Popup box */
+.form-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    display: none;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.form-box input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+#studentTable tbody tr {
+    cursor: pointer;
+}
+
+#studentTable tbody tr.selected {
+    background-color: #9f9f9f;
+    font-weight: bold;
+}   
+
+.read-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.read-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.read-table td:first-child {
+    color: #666;
+    width: 40%;
+}
+
+#studentTable tbody tr {
+    cursor: pointer;    
+}
+
+#studentTable tbody tr.selected {
+    background-color: #cce5ff;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn.search {
+    background-color: #17a2b8;
+    color: white;
+}

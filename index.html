@@ -1,0 +1,90 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATABASE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="header">CREATE READ UPDATE DELETE</h1>
+<div class="container">
+    <button class="btn create" onclick="openForm()">ADD STUDENT</button>
+
+    <div id="overlay" class="overlay" onclick="closeForm(); closeReadForm(); closeUpdateForm()"></div>
+
+    <!-- ADD STUDENT FORM -->
+    <div id="studentForm" class="form-box">
+        <h3>Add Student</h3>
+        <form id="studentFormElement">
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="middle_name" placeholder="Middle Name">
+            <input type="text" name="course" placeholder="Course" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <div class="actions">
+                <button type="submit">Save</button>
+                <button type="button" class="cancel" onclick="closeForm()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- READ STUDENT MODAL -->
+    <div id="readForm" class="form-box">
+        <h3>Student Details</h3>
+        <table class="read-table">
+            <tr><td><b>ID</b></td><td id="readId"></td></tr>
+            <tr><td><b>Last Name</b></td><td id="readLName"></td></tr>
+            <tr><td><b>First Name</b></td><td id="readFName"></td></tr>
+            <tr><td><b>Middle Name</b></td><td id="readMName"></td></tr>
+            <tr><td><b>Course</b></td><td id="readCourse"></td></tr>
+            <tr><td><b>Age</b></td><td id="readAge"></td></tr>
+        </table>
+        <div class="actions">
+            <button type="button" class="cancel" onclick="closeReadForm()">Close</button>
+        </div>
+    </div>
+
+    <!-- UPDATE STUDENT MODAL -->
+    <div id="updateForm" class="form-box">
+        <h3>Update Student</h3>
+        <form id="updateFormElement">
+            <input type="hidden" name="id" id="updateId">
+            <input type="text" name="last_name" id="updateLName" placeholder="Last Name" required>
+            <input type="text" name="first_name" id="updateFName" placeholder="First Name" required>
+            <input type="text" name="middle_name" id="updateMName" placeholder="Middle Name">
+            <input type="text" name="course" id="updateCourse" placeholder="Course" required>
+            <input type="number" name="age" id="updateAge" placeholder="Age" required>
+            <div class="actions">
+                <button type="submit">Update</button>
+                <button type="button" class="cancel" onclick="closeUpdateForm()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <button class="btn read" id="readBtn">READ</button>
+    <button class="btn update" id="updateBtn">UPDATE</button>
+    <button class="btn delete" id="deleteBtn">DELETE</button>
+</div>
+
+<!-- ✅ SEARCH BAR -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search by name, course...">
+    <button class="btn search" id="searchBtn">SEARCH</button>
+    <button class="btn cancel" id="clearBtn">CLEAR</button>
+</div>
+
+<table id="studentTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
